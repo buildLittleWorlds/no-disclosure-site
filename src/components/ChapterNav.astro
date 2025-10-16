@@ -1,0 +1,119 @@
+---
+interface Props {
+  prevChapter?: { title: string; path: string };
+  nextChapter?: { title: string; path: string };
+}
+
+const { prevChapter, nextChapter } = Astro.props;
+---
+
+<nav class="chapter-nav">
+  <div class="chapter-nav-container">
+    {prevChapter && (
+      <a href={prevChapter.path} class="nav-button prev">
+        <span class="arrow">←</span>
+        <div>
+          <span class="label">Previous</span>
+          <span class="title">{prevChapter.title}</span>
+        </div>
+      </a>
+    )}
+    {!prevChapter && <div></div>}
+
+    {nextChapter && (
+      <a href={nextChapter.path} class="nav-button next">
+        <div>
+          <span class="label">Next</span>
+          <span class="title">{nextChapter.title}</span>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    )}
+  </div>
+</nav>
+
+<style>
+  .chapter-nav {
+    margin: 4rem 0 2rem;
+    padding: 2rem 0;
+    border-top: 2px solid var(--burgundy);
+  }
+
+  .chapter-nav-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--warm-beige);
+    border: 2px solid var(--burgundy);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .nav-button:hover {
+    background-color: var(--burgundy);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 31, 31, 0.3);
+  }
+
+  .nav-button:hover .arrow,
+  .nav-button:hover .label,
+  .nav-button:hover .title {
+    color: var(--warm-beige);
+  }
+
+  .nav-button.prev {
+    justify-content: flex-start;
+  }
+
+  .nav-button.next {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .arrow {
+    font-size: 2rem;
+    color: var(--burgundy);
+    transition: color 0.3s ease;
+  }
+
+  .label {
+    display: block;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--burgundy);
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+  }
+
+  .title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-burgundy);
+  }
+
+  @media (max-width: 768px) {
+    .chapter-nav-container {
+      flex-direction: column;
+    }
+
+    .nav-button {
+      max-width: 100%;
+    }
+
+    .nav-button.next {
+      margin-left: 0;
+    }
+  }
+</style>

@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import ChapterNav from '../components/ChapterNav.astro';
+---
+
+<BaseLayout title="Chapter 2: Ownership of the Creative Process">
+  <Navigation />
+
+  <main class="chapter">
+    <div class="chapter-hero">
+      <img src="/assets/image-5.png" alt="Ownership of the Creative Process" />
+      <div class="chapter-hero-overlay">
+        <h1>Chapter 2: Ownership of the Creative Process</h1>
+      </div>
+    </div>
+
+    <article class="chapter-content">
+      <div class="container">
+        <section class="intro">
+          <p class="lead">
+            This chapter investigates the thorny question of who "owns" creativity when generative AI is involved, exploring the evolving
+            landscape of intellectual property and contrasting unprecedented demands for methodological transparency with the long history
+            of creative ownership.
+          </p>
+        </section>
+
+        <section>
+          <h2>Legal Battles and Fair Use</h2>
+          <p>
+            The chapter examines recent legal battles, such as <em>Andersen et al. v. Stability AI Ltd.</em>, where artists sued AI
+            platforms for copyright infringement over the use of their work in training data. These cases raise fundamental questions about
+            "fair use" and the necessary degree of human involvement for copyrightability.
+          </p>
+        </section>
+
+        <section>
+          <h2>Only Humans Need Apply</h2>
+          <p>
+            The chapter reinforces the legal principle that "Only Humans Need Apply" for copyright protection, citing landmark cases like
+            <em>Bridgeman Art Library v. Corel Corp.</em> This precedent established that mere reproductions of public domain works lack
+            the originality required for copyright.
+          </p>
+          <p>
+            This principle has been applied to AI-generated art in cases like that of Jason Allen's <em>Théâtre D'opéra Spatial</em> and
+            Stephen Thaler's <em>A Recent Entrance to Paradise</em>, where copyright was denied due to a perceived lack of direct human authorship.
+          </p>
+          <blockquote>
+            The law remains tethered to outdated notions of physical manipulation, failing to recognize the creativity inherent in the
+            conceptual and iterative commands given to AI.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Dürer and the Birth of Artistic Copyright</h2>
+          <p>
+            The chapter recounts the story of Renaissance artist Albrecht Dürer, who secured an "Imperial Privilege" to protect his
+            engravings from unauthorized copying, creating an early form of copyright and establishing his monogram as one of the first
+            artist trademarks.
+          </p>
+          <p>
+            This is paralleled with the development of literary copyright, from Renaissance printing privileges to the establishment of
+            the "fair use" doctrine. These historical examples reveal a centuries-long struggle to define and protect creative ownership.
+          </p>
+        </section>
+
+        <section>
+          <h2>Duchamp and Conceptual Vision</h2>
+          <p>
+            The chapter explores the influence of provocative artists like Marcel Duchamp, whose <em>Fountain</em> challenged whether
+            authorship lies in technical skill or conceptual vision—a question later amplified by poststructuralist thinkers like Roland Barthes.
+          </p>
+          <blockquote>
+            The current debates surrounding AI and copyright are not new but are a continuation of long-standing tensions between
+            technological innovation and traditional concepts of creative identity.
+          </blockquote>
+        </section>
+
+        <ChapterNav
+          prevChapter={{ title: "The Illusion of Transparency", path: "/chapter-1" }}
+          nextChapter={{ title: "Authorship Redefined", path: "/chapter-3" }}
+        />
+      </div>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .chapter { min-height: 100vh; }
+  .chapter-hero { position: relative; height: 60vh; overflow: hidden; }
+  .chapter-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+  .chapter-hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 2rem; background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent); }
+  .chapter-hero-overlay h1 { font-size: 3.5rem; color: var(--warm-beige); max-width: 1400px; margin: 0 auto; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
+  .chapter-content { padding: 4rem 0; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+  .intro { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid var(--burgundy); }
+  .lead { font-size: 1.4rem; line-height: 1.8; color: var(--burgundy); font-style: italic; }
+  section { margin-bottom: 3rem; }
+  h2 { font-size: 2.2rem; color: var(--dark-burgundy); margin-bottom: 1.5rem; margin-top: 3rem; }
+  p { font-size: 1.2rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--dark-burgundy); }
+  blockquote { margin: 2rem 0; padding: 1.5rem 2rem; background-color: var(--warm-beige); border-left: 5px solid var(--burgundy); font-size: 1.3rem; font-style: italic; color: var(--burgundy); border-radius: 0 8px 8px 0; }
+  em { color: var(--burgundy); }
+  @media (max-width: 768px) {
+    .chapter-hero { height: 40vh; }
+    .chapter-hero-overlay h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    p, .lead { font-size: 1.1rem; }
+    blockquote { font-size: 1.1rem; padding: 1rem 1.5rem; }
+  }
+</style>

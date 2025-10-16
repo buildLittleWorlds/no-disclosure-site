@@ -1,0 +1,349 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<BaseLayout title="About the Book">
+  <Navigation />
+
+  <main class="about">
+    <div class="hero-section">
+      <div class="hero-image">
+        <img src="/assets/conclusion.png" alt="About Against Disclosure" />
+      </div>
+      <div class="container">
+        <h1>About Against Disclosure</h1>
+        <p class="subtitle">A Defense of Creative Autonomy in the Age of AI</p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-card">
+            <h2>The Argument</h2>
+            <p>
+              This book challenges the widespread demand that creators must disclose their use of AI tools. It argues that such mandates
+              are historically unprecedented, practically impossible, and fundamentally at odds with the nature of creativity itself.
+            </p>
+            <p>
+              Through historical analysis, legal examination, and philosophical inquiry, the book demonstrates that creative processes
+              have always been opaque, collaborative, and resistant to complete documentation.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h2>Key Themes</h2>
+            <ul>
+              <li>The historical precedent for opacity in creative processes</li>
+              <li>The myth of the solitary author and genius</li>
+              <li>Legal complexities of AI-generated content and copyright</li>
+              <li>The bureaucratic burden of exhaustive documentation</li>
+              <li>Institutional overreach and authority anxiety</li>
+              <li>The future of human-AI collaboration in creative work</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h2>Historical Context</h2>
+            <p>
+              The book traces parallels from Gutenberg's printing press to modern AI, from Renaissance copyright battles to contemporary
+              legal disputes, and from medieval scriptoria to digital collaboration platforms.
+            </p>
+            <p>
+              It demonstrates that technological disruptions to creative practice are not new—and neither is the institutional resistance
+              they provoke.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h2>For Whom</h2>
+            <p>
+              This book is for creators navigating the AI era, academics wrestling with disclosure policies, publishers setting guidelines,
+              and anyone interested in the future of authorship and creative autonomy.
+            </p>
+            <p>
+              It's a manifesto for those who believe that creative methods should remain the private domain of the creator, and that work
+              should be judged on its merit, not on an audit trail of its production.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="structure-section">
+      <div class="container">
+        <h2>Book Structure</h2>
+        <div class="structure-grid">
+          <div class="structure-item">
+            <span class="chapter-number">Intro</span>
+            <h3>Beyond Transparency</h3>
+            <p>Establishes the central thesis against mandatory disclosure</p>
+          </div>
+
+          <div class="structure-item">
+            <span class="chapter-number">Ch. 1</span>
+            <h3>The Illusion of Transparency</h3>
+            <p>Deconstructs the demand for full disclosure as impractical and flawed</p>
+          </div>
+
+          <div class="structure-item">
+            <span class="chapter-number">Ch. 2</span>
+            <h3>Ownership of the Creative Process</h3>
+            <p>Explores who "owns" creativity when AI is involved</p>
+          </div>
+
+          <div class="structure-item">
+            <span class="chapter-number">Ch. 3</span>
+            <h3>Authorship Redefined</h3>
+            <p>Dismantles the myth of the solitary author</p>
+          </div>
+
+          <div class="structure-item">
+            <span class="chapter-number">Ch. 4</span>
+            <h3>Ethical and Practical Failures</h3>
+            <p>Critiques the institutional fixation on detecting AI use</p>
+          </div>
+
+          <div class="structure-item">
+            <span class="chapter-number">Ch. 5</span>
+            <h3>Creative Autonomy</h3>
+            <p>Argues against institutional overreach and for creative freedom</p>
+          </div>
+
+          <div class="structure-item">
+            <span class="chapter-number">Conc.</span>
+            <h3>Embracing the Opaque</h3>
+            <p>A forceful defense of methodological opacity</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Begin Reading</h2>
+        <p>Explore the full argument for creative autonomy in the age of AI</p>
+        <a href="/introduction" class="cta-button">Start with the Introduction</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .about {
+    min-height: 100vh;
+  }
+
+  .hero-section {
+    position: relative;
+    background: linear-gradient(135deg, var(--dark-burgundy), var(--burgundy));
+    padding: 6rem 2rem;
+    text-align: center;
+    color: var(--warm-beige);
+    overflow: hidden;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    filter: brightness(0.5) contrast(1.1);
+  }
+
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .content-section {
+    padding: 6rem 0;
+    background-color: var(--light-beige);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .about-card {
+    background-color: var(--warm-beige);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--burgundy);
+  }
+
+  .about-card h2 {
+    font-size: 2rem;
+    color: var(--dark-burgundy);
+    margin-bottom: 1rem;
+  }
+
+  .about-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-burgundy);
+    margin-bottom: 1rem;
+  }
+
+  .about-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .about-card li {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-burgundy);
+  }
+
+  .about-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--burgundy);
+    font-weight: bold;
+  }
+
+  .structure-section {
+    padding: 6rem 0;
+    background-color: var(--warm-beige);
+  }
+
+  .structure-section h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-burgundy);
+  }
+
+  .structure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .structure-item {
+    background-color: var(--light-beige);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--burgundy);
+    transition: all 0.3s ease;
+  }
+
+  .structure-item:hover {
+    transform: translateX(8px);
+    box-shadow: -4px 4px 12px rgba(74, 31, 31, 0.2);
+  }
+
+  .chapter-number {
+    display: inline-block;
+    background-color: var(--burgundy);
+    color: var(--warm-beige);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .structure-item h3 {
+    font-size: 1.3rem;
+    color: var(--dark-burgundy);
+    margin: 0.75rem 0 0.5rem 0;
+  }
+
+  .structure-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--burgundy);
+  }
+
+  .cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--burgundy), var(--dark-burgundy));
+    text-align: center;
+    color: var(--warm-beige);
+  }
+
+  .cta-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--warm-beige);
+    color: var(--dark-burgundy);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid var(--accent-gold);
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .cta-button:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+
+    .about-grid,
+    .structure-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .structure-section h2,
+    .cta-section h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import ChapterNav from '../components/ChapterNav.astro';
+---
+
+<BaseLayout title="Chapter 4: Ethical and Practical Failures of Disclosure">
+  <Navigation />
+
+  <main class="chapter">
+    <div class="chapter-hero">
+      <img src="/assets/image-7.png" alt="Ethical and Practical Failures" />
+      <div class="chapter-hero-overlay">
+        <h1>Chapter 4: Ethical and Practical Failures of Disclosure</h1>
+      </div>
+    </div>
+
+    <article class="chapter-content">
+      <div class="container">
+        <section class="intro">
+          <p class="lead">
+            This chapter argues that the current academic and institutional fixation on detecting and disclosing the use of generative AI
+            is both impractical and founded on ethical misconceptions.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Ethical Witch Hunt</h2>
+          <p>
+            The chapter draws parallels between the current panic and historical anxieties over calculators and spellcheck, where fears of
+            skill erosion eventually gave way to normalization. The present "ethical witch hunt" against AI, exemplified by the use of
+            tools like Turnitin to detect AI-generated text, is seen as the latest iteration of this recurring pattern.
+          </p>
+          <blockquote>
+            This obsessive focus on documentation is based on a culturally specific and narrow view of plagiarism and fundamentally
+            misunderstands the hybrid nature of creativity.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>The Flawed Plagiarism Analogy</h2>
+          <p>
+            Equating AI assistance with plagiarism is a flawed analogy. Unlike plagiarism, which involves copying a unique work,
+            generative models produce varied outputs from identical prompts, making exact replication impossible.
+          </p>
+          <p>
+            The chapter highlights the global diversity in how plagiarism is conceptualized. While the American interpretation emphasizes
+            individual ownership, many other cultures view knowledge as communal, where repeating authoritative texts is a form of respect.
+          </p>
+        </section>
+
+        <section>
+          <h2>Ethics as Historically Contingent</h2>
+          <p>
+            The chapter demonstrates that what is deemed "ethical" has evolved significantly over time. In the Renaissance and Baroque
+            periods, overt quotation and visual allusions were celebrated as signs of erudition. The modern obsession with "originality"
+            is largely a product of the Romantic era's ideal of the solitary genius.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Bureaucratic Burden</h2>
+          <p>
+            Institutions demand exhaustive documentation of a creative process they simultaneously admit is not purely original. This
+            creates a "Bureaucratic Burden of Documenting Authorship," which shifts the author's role from creator to administrator.
+          </p>
+          <p>
+            The chapter warns of "The Psychological Cost of Bureaucratic Hypervigilance," where the constant pressure to document stifles
+            spontaneity and leads to burnout.
+          </p>
+          <blockquote>
+            A pragmatic framework for methodological privacy should advocate for purpose-driven documentation, minimally intrusive
+            oversight, and the preservation of a protected exploratory space for creators.
+          </blockquote>
+        </section>
+
+        <ChapterNav
+          prevChapter={{ title: "Authorship Redefined", path: "/chapter-3" }}
+          nextChapter={{ title: "Creative Autonomy and Institutional Overreach", path: "/chapter-5" }}
+        />
+      </div>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .chapter { min-height: 100vh; }
+  .chapter-hero { position: relative; height: 60vh; overflow: hidden; }
+  .chapter-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+  .chapter-hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 2rem; background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent); }
+  .chapter-hero-overlay h1 { font-size: 3.5rem; color: var(--warm-beige); max-width: 1400px; margin: 0 auto; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
+  .chapter-content { padding: 4rem 0; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+  .intro { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid var(--burgundy); }
+  .lead { font-size: 1.4rem; line-height: 1.8; color: var(--burgundy); font-style: italic; }
+  section { margin-bottom: 3rem; }
+  h2 { font-size: 2.2rem; color: var(--dark-burgundy); margin-bottom: 1.5rem; margin-top: 3rem; }
+  p { font-size: 1.2rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--dark-burgundy); }
+  blockquote { margin: 2rem 0; padding: 1.5rem 2rem; background-color: var(--warm-beige); border-left: 5px solid var(--burgundy); font-size: 1.3rem; font-style: italic; color: var(--burgundy); border-radius: 0 8px 8px 0; }
+  em { color: var(--burgundy); }
+  @media (max-width: 768px) {
+    .chapter-hero { height: 40vh; }
+    .chapter-hero-overlay h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    p, .lead { font-size: 1.1rem; }
+    blockquote { font-size: 1.1rem; padding: 1rem 1.5rem; }
+  }
+</style>

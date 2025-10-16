@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import ChapterNav from '../components/ChapterNav.astro';
+---
+
+<BaseLayout title="Chapter 5: Creative Autonomy and Institutional Overreach">
+  <Navigation />
+
+  <main class="chapter">
+    <div class="chapter-hero">
+      <img src="/assets/image-8.png" alt="Creative Autonomy and Institutional Overreach" />
+      <div class="chapter-hero-overlay">
+        <h1>Chapter 5: Creative Autonomy and Institutional Overreach</h1>
+      </div>
+    </div>
+
+    <article class="chapter-content">
+      <div class="container">
+        <section class="intro">
+          <p class="lead">
+            This chapter argues that the stringent transparency demands imposed by publishers and academic institutions represent a form
+            of overreach that threatens creative autonomy in the age of generative AI.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Central Paradox</h2>
+          <p>
+            A central paradox emerges: AI-assisted work is often praised for its quality when its origins are concealed but is frequently
+            rejected once its algorithmic assistance is disclosed. This reveals a deep-seated institutional bias against technological
+            change that prioritizes traditional methods over intellectual merit.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Rise of Algorithmic Authorship</h2>
+          <p>
+            AI is streamlining the entire academic publication process, from topic modeling and literature reviews to citation management
+            and peer review. AI-assisted peer review is presented as a potential solution to a system plagued by bias and fatigue.
+          </p>
+          <p>
+            However, this rise in efficiency has triggered "Authority Anxiety" among established institutions.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Modern Scopes Trial</h2>
+          <p>
+            The chapter draws a compelling parallel to the 1925 Scopes "Monkey Trial," framing the current debate as a modern-day struggle
+            between institutional control and intellectual freedom. Just as that trial debated who should control educational curricula,
+            today's conflict centers on who has the authority to define legitimate creative methodologies.
+          </p>
+          <blockquote>
+            Just as the Scopes Trial questioned who controls knowledge, today we ask: who has the authority to dictate how creativity
+            should be practiced?
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Current Policy Landscape</h2>
+          <p>
+            The chapter provides a comprehensive overview of current AI policies across publishing, news, and academia. Academic publishers
+            like <em>Nature</em> and Elsevier have developed guidelines that permit AI assistance for tasks like improving readability but
+            firmly place accountability on the human author.
+          </p>
+          <p>
+            Trade publishers like Penguin Random House have taken a more defensive stance, championing human-only creation, while news
+            organizations such as <em>The New York Times</em> and <em>Reuters</em> have adopted cautious policies that mandate transparency
+            and strict human oversight.
+          </p>
+        </section>
+
+        <section>
+          <h2>From Restriction to Responsibility</h2>
+          <p>
+            The chapter concludes by advocating for a move "From Restriction to Responsibility." It points to legal frameworks like the
+            U.S. fair-use doctrine as models for allowing innovation while protecting creators.
+          </p>
+          <blockquote>
+            We need balanced policies that guide rather than restrict AI use, fostering a culture of ethical experimentation that
+            recognizes AI as a powerful tool in the creative toolkit, not a threat to be contained.
+          </blockquote>
+        </section>
+
+        <ChapterNav
+          prevChapter={{ title: "Ethical and Practical Failures", path: "/chapter-4" }}
+          nextChapter={{ title: "Embracing the Opaque", path: "/conclusion" }}
+        />
+      </div>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .chapter { min-height: 100vh; }
+  .chapter-hero { position: relative; height: 60vh; overflow: hidden; }
+  .chapter-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+  .chapter-hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 3rem 2rem; background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent); }
+  .chapter-hero-overlay h1 { font-size: 3.5rem; color: var(--warm-beige); max-width: 1400px; margin: 0 auto; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
+  .chapter-content { padding: 4rem 0; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+  .intro { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid var(--burgundy); }
+  .lead { font-size: 1.4rem; line-height: 1.8; color: var(--burgundy); font-style: italic; }
+  section { margin-bottom: 3rem; }
+  h2 { font-size: 2.2rem; color: var(--dark-burgundy); margin-bottom: 1.5rem; margin-top: 3rem; }
+  p { font-size: 1.2rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--dark-burgundy); }
+  blockquote { margin: 2rem 0; padding: 1.5rem 2rem; background-color: var(--warm-beige); border-left: 5px solid var(--burgundy); font-size: 1.3rem; font-style: italic; color: var(--burgundy); border-radius: 0 8px 8px 0; }
+  em { color: var(--burgundy); }
+  @media (max-width: 768px) {
+    .chapter-hero { height: 40vh; }
+    .chapter-hero-overlay h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    p, .lead { font-size: 1.1rem; }
+    blockquote { font-size: 1.1rem; padding: 1rem 1.5rem; }
+  }
+</style>

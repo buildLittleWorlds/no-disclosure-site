@@ -1,0 +1,156 @@
+---
+const chapters = [
+  { title: "Home", path: "/" },
+  { title: "Introduction", path: "/introduction" },
+  { title: "Chapter 1", path: "/chapter-1" },
+  { title: "Chapter 2", path: "/chapter-2" },
+  { title: "Chapter 3", path: "/chapter-3" },
+  { title: "Chapter 4", path: "/chapter-4" },
+  { title: "Chapter 5", path: "/chapter-5" },
+  { title: "Conclusion", path: "/conclusion" },
+  { title: "Timeline", path: "/timeline" },
+  { title: "About", path: "/about" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="navigation">
+  <div class="nav-container">
+    <a href="/" class="logo">Against Disclosure</a>
+
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links">
+      {chapters.map(chapter => (
+        <li>
+          <a
+            href={chapter.path}
+            class:list={["nav-link", { active: currentPath === chapter.path }]}
+          >
+            {chapter.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navigation {
+    background-color: var(--dark-burgundy);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--warm-beige);
+    letter-spacing: -0.5px;
+  }
+
+  .logo:hover {
+    color: var(--accent-gold);
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--warm-beige);
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: var(--warm-beige);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .nav-link:hover {
+    background-color: var(--burgundy);
+    color: var(--accent-gold);
+  }
+
+  .nav-link.active {
+    background-color: var(--burgundy);
+    color: var(--accent-gold);
+  }
+
+  @media (max-width: 1024px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--dark-burgundy);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-link {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle?.addEventListener('click', () => {
+      navLinks?.classList.toggle('active');
+    });
+  });
+</script>

@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import ChapterNav from '../components/ChapterNav.astro';
+---
+
+<BaseLayout title="Introduction: Beyond Transparency">
+  <Navigation />
+
+  <main class="chapter">
+    <div class="chapter-hero">
+      <img src="/assets/introduction.png" alt="Beyond Transparency" />
+      <div class="chapter-hero-overlay">
+        <h1>Introduction: Beyond Transparency</h1>
+      </div>
+    </div>
+
+    <article class="chapter-content">
+      <div class="container">
+        <section class="intro">
+          <p class="lead">
+            The introduction establishes the book's central thesis against the mandatory disclosure of AI use in creative works.
+            It draws a historical parallel between current anxieties surrounding artificial intelligence and the disruption caused
+            by Johannes Gutenberg's printing press.
+          </p>
+        </section>
+
+        <section>
+          <h2>The Historical Parallel</h2>
+          <p>
+            Just as 15th-century traditionalists feared texts not painstakingly copied by monks, modern critics of AI demand meticulous
+            transparency, treating the creative process as a formula to be audited. The book argues this demand is not only historically
+            unprecedented but also fundamentally at odds with the inherently opaque and messy nature of creativity.
+          </p>
+          <blockquote>
+            True authorship lies not in a detailed log of methods but in a creator's willingness to take responsibility for the final
+            product, irrespective of its origins.
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>The Myth of Disclosure</h2>
+          <p>
+            The text introduces the "myth of disclosure," framing the debate around generative AI as a conflict over control, not just
+            transparency. While skeptics present a simple binary of human originality versus machine imitation, the authors contend the
+            real issue is an institutional desire to police creativity—a desire that misunderstands that creative power often stems from
+            hidden and even inscrutable sources.
+          </p>
+        </section>
+
+        <section>
+          <h2>Legal Complexities Emerging</h2>
+          <p>
+            The introduction highlights the legal complexities already emerging, citing the case of Kris Kashtanova's graphic novel
+            <em>Zarya of the Dawn</em>, where copyright was granted for the human-written narrative but denied for the AI-generated images.
+            This is contrasted with the 2025 copyrighting of Kent Keirsey's <em>A Slice of American Cheese</em>, which was approved only
+            after the artist exhaustively documented 34 distinct verbal instructions given to the AI, thereby complicating the very definition
+            of "human creativity."
+          </p>
+        </section>
+
+        <section>
+          <h2>The Creative Process Through History</h2>
+          <p>
+            To define the "creative process," the chapter traces historical perspectives, from Plato's dialogue <em>Ion</em> to Renaissance
+            ideas of "poetic furor" and the practices of modern surrealists. Artists and writers throughout history, from Salvador Dalí to
+            Ernest Hemingway, have embraced methods that deliberately circumvent rational control, demonstrating the historical importance
+            of opacity in achieving creative authenticity.
+          </p>
+          <p>
+            The modern demand for precise documentation of AI use is presented as a baffling reversal of this long-standing tradition.
+          </p>
+        </section>
+
+        <section>
+          <h2>The New Creativity Economy</h2>
+          <p>
+            The rise of generative AI is seen as disrupting the paradigm of the solitary genius, moving creativity toward a collaborative
+            model where humans and algorithms work together. This shift does not diminish creativity but expands it, fostering a new
+            "creativity economy" where skills such as ideation and curation become paramount.
+          </p>
+          <blockquote>
+            The insistence on AI disclosure is a profound misunderstanding of both historical precedent and the intrinsic nature of
+            creative thought.
+          </blockquote>
+        </section>
+
+        <ChapterNav
+          nextChapter={{ title: "The Illusion of Transparency", path: "/chapter-1" }}
+        />
+      </div>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .chapter {
+    min-height: 100vh;
+  }
+
+  .chapter-hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+  }
+
+  .chapter-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.15) saturate(0.95);
+  }
+
+  .chapter-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 2rem;
+    background: linear-gradient(to top,
+                rgba(26, 18, 8, 0.95) 0%,
+                rgba(42, 24, 16, 0.7) 50%,
+                transparent 100%);
+  }
+
+  .chapter-hero-overlay h1 {
+    font-size: 3.5rem;
+    color: var(--lamplight-gold);
+    max-width: 1400px;
+    margin: 0 auto;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9),
+                 0 0 30px rgba(245, 217, 138, 0.4),
+                 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .chapter-content {
+    padding: 4rem 0;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .intro {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--burgundy);
+  }
+
+  .lead {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--burgundy);
+    font-style: italic;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    color: var(--dark-burgundy);
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    color: var(--dark-burgundy);
+  }
+
+  blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background-color: var(--warm-beige);
+    border-left: 5px solid var(--burgundy);
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--burgundy);
+    border-radius: 0 8px 8px 0;
+  }
+
+  em {
+    color: var(--burgundy);
+  }
+
+  @media (max-width: 768px) {
+    .chapter-hero {
+      height: 40vh;
+    }
+
+    .chapter-hero-overlay h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p, .lead {
+      font-size: 1.1rem;
+    }
+
+    blockquote {
+      font-size: 1.1rem;
+      padding: 1rem 1.5rem;
+    }
+  }
+</style>

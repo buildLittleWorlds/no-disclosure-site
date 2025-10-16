@@ -1,0 +1,412 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<BaseLayout title="Home">
+  <Navigation />
+
+  <main class="home">
+    <section class="hero">
+      <div class="hero-image">
+        <img src="/assets/homepage-hero.png" alt="Workshop of Ideas" />
+      </div>
+      <div class="hero-content">
+        <h1>Against Disclosure</h1>
+        <p class="subtitle">A Manifesto for Creative Autonomy in the Age of AI</p>
+        <p class="tagline">
+          Why creators should have the right to methodological opacity
+        </p>
+        <a href="/introduction" class="cta-button">Begin Reading</a>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="container">
+        <h2>The Choice Before Us</h2>
+        <div class="manifesto-grid">
+          <div class="manifesto-card">
+            <h3>The Myth of Transparency</h3>
+            <p>
+              Modern institutions demand exhaustive documentation of creative processes
+              involving AI—a requirement historically unprecedented and fundamentally at
+              odds with the nature of creativity itself.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <h3>Historical Precedent</h3>
+            <p>
+              From Plato's divine inspiration to the Surrealists' automatic writing,
+              history shows us that great creativity has always emerged from opaque,
+              inscrutable processes.
+            </p>
+          </div>
+
+          <div class="manifesto-card">
+            <h3>The New Collaboration</h3>
+            <p>
+              Generative AI is not a threat to creativity but its expansion—a return
+              to collaborative models that have defined artistic production for centuries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapters">
+      <div class="container">
+        <h2>Explore the Argument</h2>
+        <div class="chapter-grid">
+          <a href="/introduction" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/introduction.png" alt="Beyond Transparency" />
+            </div>
+            <div class="chapter-content">
+              <h3>Introduction: Beyond Transparency</h3>
+              <p>
+                From Gutenberg's press to generative AI—why the demand for
+                disclosure misunderstands creativity itself.
+              </p>
+            </div>
+          </a>
+
+          <a href="/chapter-1" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/image-4.png" alt="The Illusion of Transparency" />
+            </div>
+            <div class="chapter-content">
+              <h3>Chapter 1: The Illusion of Transparency</h3>
+              <p>
+                Deconstructing the impractical and fundamentally flawed demand
+                for full disclosure of AI use.
+              </p>
+            </div>
+          </a>
+
+          <a href="/chapter-2" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/image-5.png" alt="Ownership of the Creative Process" />
+            </div>
+            <div class="chapter-content">
+              <h3>Chapter 2: Ownership of the Creative Process</h3>
+              <p>
+                Who owns creativity when AI is involved? Legal battles and
+                historical precedents from Dürer to today.
+              </p>
+            </div>
+          </a>
+
+          <a href="/chapter-3" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/image-6.png" alt="Authorship Redefined" />
+            </div>
+            <div class="chapter-content">
+              <h3>Chapter 3: Authorship Redefined</h3>
+              <p>
+                Dismantling the myth of the solitary author—creativity has
+                always been collaborative.
+              </p>
+            </div>
+          </a>
+
+          <a href="/chapter-4" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/image-7.png" alt="Ethical and Practical Failures" />
+            </div>
+            <div class="chapter-content">
+              <h3>Chapter 4: Ethical and Practical Failures of Disclosure</h3>
+              <p>
+                Why the fixation on detecting AI is both impractical and based
+                on ethical misconceptions.
+              </p>
+            </div>
+          </a>
+
+          <a href="/chapter-5" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/image-8.png" alt="Creative Autonomy" />
+            </div>
+            <div class="chapter-content">
+              <h3>Chapter 5: Creative Autonomy and Institutional Overreach</h3>
+              <p>
+                How transparency demands function as tools of control that
+                stifle innovation and creative freedom.
+              </p>
+            </div>
+          </a>
+
+          <a href="/conclusion" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/conclusion.png" alt="Embracing the Opaque" />
+            </div>
+            <div class="chapter-content">
+              <h3>Conclusion: Embracing the Opaque</h3>
+              <p>
+                A forceful defense of methodological opacity and the future
+                of human-AI collaboration.
+              </p>
+            </div>
+          </a>
+
+          <a href="/timeline" class="chapter-card">
+            <div class="chapter-image">
+              <img src="/assets/image-9.png" alt="Historical Timeline" />
+            </div>
+            <div class="chapter-content">
+              <h3>Historical Timeline</h3>
+              <p>
+                Trace the evolution of creativity from cave paintings to AI—a
+                continuum of technological transformation.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Against Disclosure. A defense of creative autonomy.</p>
+    </div>
+  </footer>
+</BaseLayout>
+
+<style>
+  .home {
+    min-height: 100vh;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) contrast(1.1);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 2.5rem;
+    max-width: 900px;
+    background: linear-gradient(135deg, rgba(26, 18, 8, 0.92), rgba(42, 24, 16, 0.88));
+    border: 3px solid var(--lamplight-gold);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(245, 217, 138, 0.2);
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+    color: var(--lamplight-gold);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8),
+                 0 0 20px rgba(245, 217, 138, 0.3);
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+    color: var(--warm-amber);
+    margin-bottom: 1rem;
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+    color: var(--warm-beige);
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: linear-gradient(135deg, var(--deep-sepia), var(--burgundy));
+    color: var(--lamplight-gold);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 2px solid var(--warm-amber);
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .cta-button:hover {
+    background: linear-gradient(135deg, var(--warm-amber), var(--accent-gold));
+    color: var(--shadow-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(230, 176, 84, 0.5);
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .manifesto {
+    padding: 6rem 0;
+    background-color: var(--warm-beige);
+  }
+
+  .manifesto h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-burgundy);
+  }
+
+  .manifesto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .manifesto-card {
+    padding: 2rem;
+    background-color: var(--light-beige);
+    border-left: 4px solid var(--burgundy);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .manifesto-card:hover {
+    transform: translateX(8px);
+    box-shadow: -4px 4px 12px rgba(74, 31, 31, 0.2);
+  }
+
+  .manifesto-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--burgundy);
+  }
+
+  .manifesto-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .chapters {
+    padding: 6rem 0;
+    background-color: var(--light-beige);
+  }
+
+  .chapters h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-burgundy);
+  }
+
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .chapter-card {
+    background-color: var(--warm-beige);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid var(--burgundy);
+  }
+
+  .chapter-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(74, 31, 31, 0.3);
+  }
+
+  .chapter-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .chapter-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .chapter-card:hover .chapter-image img {
+    transform: scale(1.05);
+  }
+
+  .chapter-content {
+    padding: 1.5rem;
+  }
+
+  .chapter-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--dark-burgundy);
+  }
+
+  .chapter-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--burgundy);
+  }
+
+  .footer {
+    background-color: var(--dark-burgundy);
+    color: var(--warm-beige);
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .footer p {
+    font-family: 'Inter', sans-serif;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+    }
+
+    .manifesto h2,
+    .chapters h2 {
+      font-size: 2rem;
+    }
+
+    .chapter-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
