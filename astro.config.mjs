@@ -5,6 +5,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://buildLittleWorlds.github.io',
   base: '/no-disclosure-site',
+  trailingSlash: 'never',
   build: {
     format: 'directory'
   }
