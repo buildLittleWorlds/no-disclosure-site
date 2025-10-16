@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import ChapterNav from '../components/ChapterNav.astro';
+import { getUrl, getAssetUrl } from '../utils/url';
 ---
 
 <BaseLayout title="Chapter 4: Ethical and Practical Failures of Disclosure">
@@ -9,7 +10,7 @@ import ChapterNav from '../components/ChapterNav.astro';
 
   <main class="chapter">
     <div class="chapter-hero">
-      <img src="/assets/image-7.png" alt="Ethical and Practical Failures" />
+      <img src={getAssetUrl("assets/image-7.png")} alt="Ethical and Practical Failures" />
       <div class="chapter-hero-overlay">
         <h1>Chapter 4: Ethical and Practical Failures of Disclosure</h1>
       </div>
@@ -75,8 +76,8 @@ import ChapterNav from '../components/ChapterNav.astro';
         </section>
 
         <ChapterNav
-          prevChapter={{ title: "Authorship Redefined", path: "/chapter-3" }}
-          nextChapter={{ title: "Creative Autonomy and Institutional Overreach", path: "/chapter-5" }}
+          prevChapter={{ title: "Authorship Redefined", path: getUrl("/chapter-3") }}
+          nextChapter={{ title: "Creative Autonomy and Institutional Overreach", path: getUrl("/chapter-5") }}
         />
       </div>
     </article>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
+import { getUrl, getAssetUrl } from '../utils/url';
 ---
 
 <BaseLayout title="About the Book">
@@ -9,7 +10,7 @@ import Navigation from '../components/Navigation.astro';
   <main class="about">
     <div class="hero-section">
       <div class="hero-image">
-        <img src="/assets/conclusion.png" alt="About Against Disclosure" />
+        <img src={getAssetUrl("assets/conclusion.png")} alt="About Against Disclosure" />
       </div>
       <div class="container">
         <h1>About Against Disclosure</h1>
@@ -124,7 +125,7 @@ import Navigation from '../components/Navigation.astro';
       <div class="container">
         <h2>Begin Reading</h2>
         <p>Explore the full argument for creative autonomy in the age of AI</p>
-        <a href="/introduction" class="cta-button">Start with the Introduction</a>
+        <a href={getUrl("/introduction")} class="cta-button">Start with the Introduction</a>
       </div>
     </section>
   </main>

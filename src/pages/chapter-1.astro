@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import ChapterNav from '../components/ChapterNav.astro';
+import { getUrl, getAssetUrl } from '../utils/url';
 ---
 
 <BaseLayout title="Chapter 1: The Illusion of Transparency">
@@ -9,7 +10,7 @@ import ChapterNav from '../components/ChapterNav.astro';
 
   <main class="chapter">
     <div class="chapter-hero">
-      <img src="/assets/image-4.png" alt="The Illusion of Transparency" />
+      <img src={getAssetUrl("assets/image-4.png")} alt="The Illusion of Transparency" />
       <div class="chapter-hero-overlay">
         <h1>Chapter 1: The Illusion of Transparency</h1>
       </div>
@@ -83,8 +84,8 @@ import ChapterNav from '../components/ChapterNav.astro';
         </section>
 
         <ChapterNav
-          prevChapter={{ title: "Introduction", path: "/introduction" }}
-          nextChapter={{ title: "Ownership of the Creative Process", path: "/chapter-2" }}
+          prevChapter={{ title: "Introduction", path: getUrl("/introduction") }}
+          nextChapter={{ title: "Ownership of the Creative Process", path: getUrl("/chapter-2") }}
         />
       </div>
     </article>

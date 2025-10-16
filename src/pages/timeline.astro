@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
+import { getUrl, getAssetUrl } from '../utils/url';
 ---
 
 <BaseLayout title="Historical Timeline">
@@ -8,7 +9,7 @@ import Navigation from '../components/Navigation.astro';
 
   <main class="timeline-page">
     <div class="timeline-hero">
-      <img src="/assets/image-9.png" alt="The Continuum of Creativity" />
+      <img src={getAssetUrl("assets/image-9.png")} alt="The Continuum of Creativity" />
       <div class="timeline-hero-overlay">
         <h1>The Continuum of Creativity</h1>
         <p class="subtitle">From Ancient Tools to Generative AI</p>
@@ -211,7 +212,7 @@ import Navigation from '../components/Navigation.astro';
           gradual normalization, and ultimate expansion of creative capacity. The debate over AI and creative disclosure is not new—it's
           the latest iteration of a timeless tension between innovation and tradition.
         </p>
-        <a href="/conclusion" class="cta-button">Read the Conclusion</a>
+        <a href={getUrl("/conclusion")} class="cta-button">Read the Conclusion</a>
       </div>
     </section>
   </main>

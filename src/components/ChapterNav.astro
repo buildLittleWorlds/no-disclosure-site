@@ -1,4 +1,6 @@
 ---
+import { getUrl } from '../utils/url';
+
 interface Props {
   prevChapter?: { title: string; path: string };
   nextChapter?: { title: string; path: string };
@@ -10,7 +12,7 @@ const { prevChapter, nextChapter } = Astro.props;
 <nav class="chapter-nav">
   <div class="chapter-nav-container">
     {prevChapter && (
-      <a href={prevChapter.path} class="nav-button prev">
+      <a href={getUrl(prevChapter.path)} class="nav-button prev">
         <span class="arrow">←</span>
         <div>
           <span class="label">Previous</span>
@@ -21,7 +23,7 @@ const { prevChapter, nextChapter } = Astro.props;
     {!prevChapter && <div></div>}
 
     {nextChapter && (
-      <a href={nextChapter.path} class="nav-button next">
+      <a href={getUrl(nextChapter.path)} class="nav-button next">
         <div>
           <span class="label">Next</span>
           <span class="title">{nextChapter.title}</span>

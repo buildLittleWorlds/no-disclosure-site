@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import ChapterNav from '../components/ChapterNav.astro';
+import { getUrl, getAssetUrl } from '../utils/url';
 ---
 
 <BaseLayout title="Conclusion: Embracing the Opaque">
@@ -9,7 +10,7 @@ import ChapterNav from '../components/ChapterNav.astro';
 
   <main class="chapter">
     <div class="chapter-hero">
-      <img src="/assets/conclusion.png" alt="Embracing the Opaque" />
+      <img src={getAssetUrl("assets/conclusion.png")} alt="Embracing the Opaque" />
       <div class="chapter-hero-overlay">
         <h1>Conclusion: Embracing the Opaque</h1>
       </div>
@@ -84,7 +85,7 @@ import ChapterNav from '../components/ChapterNav.astro';
         </section>
 
         <ChapterNav
-          prevChapter={{ title: "Creative Autonomy and Institutional Overreach", path: "/chapter-5" }}
+          prevChapter={{ title: "Creative Autonomy and Institutional Overreach", path: getUrl("/chapter-5") }}
         />
       </div>
     </article>

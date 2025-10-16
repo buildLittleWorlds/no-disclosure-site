@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
+import { getUrl, getAssetUrl } from '../utils/url';
 ---
 
 <BaseLayout title="Home">
@@ -9,7 +10,7 @@ import Navigation from '../components/Navigation.astro';
   <main class="home">
     <section class="hero">
       <div class="hero-image">
-        <img src="/assets/homepage-hero.png" alt="Workshop of Ideas" />
+        <img src={getAssetUrl("assets/homepage-hero.png")} alt="Workshop of Ideas" />
       </div>
       <div class="hero-content">
         <h1>Against Disclosure</h1>
@@ -17,7 +18,7 @@ import Navigation from '../components/Navigation.astro';
         <p class="tagline">
           Why creators should have the right to methodological opacity
         </p>
-        <a href="/introduction" class="cta-button">Begin Reading</a>
+        <a href={getUrl("/introduction")} class="cta-button">Begin Reading</a>
       </div>
     </section>
 
@@ -58,9 +59,9 @@ import Navigation from '../components/Navigation.astro';
       <div class="container">
         <h2>Explore the Argument</h2>
         <div class="chapter-grid">
-          <a href="/introduction" class="chapter-card">
+          <a href={getUrl("/introduction")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/introduction.png" alt="Beyond Transparency" />
+              <img src={getAssetUrl("assets/introduction.png")} alt="Beyond Transparency" />
             </div>
             <div class="chapter-content">
               <h3>Introduction: Beyond Transparency</h3>
@@ -71,9 +72,9 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </a>
 
-          <a href="/chapter-1" class="chapter-card">
+          <a href={getUrl("/chapter-1")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/image-4.png" alt="The Illusion of Transparency" />
+              <img src={getAssetUrl("assets/image-4.png")} alt="The Illusion of Transparency" />
             </div>
             <div class="chapter-content">
               <h3>Chapter 1: The Illusion of Transparency</h3>
@@ -84,9 +85,9 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </a>
 
-          <a href="/chapter-2" class="chapter-card">
+          <a href={getUrl("/chapter-2")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/image-5.png" alt="Ownership of the Creative Process" />
+              <img src={getAssetUrl("assets/image-5.png")} alt="Ownership of the Creative Process" />
             </div>
             <div class="chapter-content">
               <h3>Chapter 2: Ownership of the Creative Process</h3>
@@ -97,9 +98,9 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </a>
 
-          <a href="/chapter-3" class="chapter-card">
+          <a href={getUrl("/chapter-3")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/image-6.png" alt="Authorship Redefined" />
+              <img src={getAssetUrl("assets/image-6.png")} alt="Authorship Redefined" />
             </div>
             <div class="chapter-content">
               <h3>Chapter 3: Authorship Redefined</h3>
@@ -110,9 +111,9 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </a>
 
-          <a href="/chapter-4" class="chapter-card">
+          <a href={getUrl("/chapter-4")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/image-7.png" alt="Ethical and Practical Failures" />
+              <img src={getAssetUrl("assets/image-7.png")} alt="Ethical and Practical Failures" />
             </div>
             <div class="chapter-content">
               <h3>Chapter 4: Ethical and Practical Failures of Disclosure</h3>
@@ -123,9 +124,9 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </a>
 
-          <a href="/chapter-5" class="chapter-card">
+          <a href={getUrl("/chapter-5")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/image-8.png" alt="Creative Autonomy" />
+              <img src={getAssetUrl("assets/image-8.png")} alt="Creative Autonomy" />
             </div>
             <div class="chapter-content">
               <h3>Chapter 5: Creative Autonomy and Institutional Overreach</h3>
@@ -136,9 +137,9 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </a>
 
-          <a href="/conclusion" class="chapter-card">
+          <a href={getUrl("/conclusion")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/conclusion.png" alt="Embracing the Opaque" />
+              <img src={getAssetUrl("assets/conclusion.png")} alt="Embracing the Opaque" />
             </div>
             <div class="chapter-content">
               <h3>Conclusion: Embracing the Opaque</h3>
@@ -149,9 +150,9 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </a>
 
-          <a href="/timeline" class="chapter-card">
+          <a href={getUrl("/timeline")} class="chapter-card">
             <div class="chapter-image">
-              <img src="/assets/image-9.png" alt="Historical Timeline" />
+              <img src={getAssetUrl("assets/image-9.png")} alt="Historical Timeline" />
             </div>
             <div class="chapter-content">
               <h3>Historical Timeline</h3>
