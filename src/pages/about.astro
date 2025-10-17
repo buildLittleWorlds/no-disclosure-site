@@ -24,7 +24,13 @@ import { getUrl, getAssetUrl } from '../utils/url';
           <div class="about-card highlight-card">
             <h2>The Authors</h2>
             <p>
-              <strong>Against Disclosure</strong> is authored by <strong>Dr. James Hutson</strong> and <strong>Dr. Daniel Plate</strong>, 
+              <strong>Against Disclosure</strong> is authored by 
+              <a href="https://www.linkedin.com/in/jameshutsonphd/" target="_blank" rel="noopener noreferrer" class="author-link">
+                <strong>Dr. James Hutson</strong>
+              </a> and 
+              <a href="https://www.linkedin.com/in/daniel-plate-91a349265/" target="_blank" rel="noopener noreferrer" class="author-link">
+                <strong>Dr. Daniel Plate</strong>
+              </a>, 
               two scholars at the forefront of the debate on AI, creativity, and academic integrity.
             </p>
             <p>
@@ -37,6 +43,17 @@ import { getUrl, getAssetUrl } from '../utils/url';
                 "The Case Against Disclosure: Generative AI and the Myth of Transparency in Creative Work"
               </a>
             </p>
+            <div class="author-links">
+              <span>Connect with the authors:</span>
+              <div class="link-buttons">
+                <a href="https://www.linkedin.com/in/jameshutsonphd/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                  Dr. James Hutson on LinkedIn
+                </a>
+                <a href="https://www.linkedin.com/in/daniel-plate-91a349265/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                  Dr. Daniel Plate on LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="about-card">
@@ -254,6 +271,54 @@ import { getUrl, getAssetUrl } from '../utils/url';
   .paper-link a:hover {
     color: var(--accent-gold);
     text-decoration: none;
+  }
+
+  .author-link {
+    color: var(--burgundy);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .author-link:hover {
+    color: var(--accent-gold);
+    text-decoration: underline;
+  }
+
+  .author-links {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--burgundy);
+  }
+
+  .author-links span {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--dark-burgundy);
+    font-weight: 600;
+  }
+
+  .link-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .linkedin-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--burgundy), var(--dark-burgundy));
+    color: var(--warm-beige);
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--burgundy);
+  }
+
+  .linkedin-btn:hover {
+    background: linear-gradient(135deg, var(--accent-gold), var(--warm-amber));
+    color: var(--dark-burgundy);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 165, 103, 0.3);
   }
 
   .about-card p {
