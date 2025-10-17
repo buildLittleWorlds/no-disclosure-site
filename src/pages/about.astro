@@ -21,6 +21,24 @@ import { getUrl, getAssetUrl } from '../utils/url';
     <section class="content-section">
       <div class="container">
         <div class="about-grid">
+          <div class="about-card highlight-card">
+            <h2>The Authors</h2>
+            <p>
+              <strong>Against Disclosure</strong> is authored by <strong>Dr. James Hutson</strong> and <strong>Dr. Daniel Plate</strong>, 
+              two scholars at the forefront of the debate on AI, creativity, and academic integrity.
+            </p>
+            <p>
+              Their collaborative work challenges conventional wisdom about transparency in the age of artificial intelligence,
+              arguing for a more nuanced understanding of creativity that respects both technological innovation and artistic autonomy.
+            </p>
+            <p class="paper-link">
+              Read the original academic paper: 
+              <a href="https://digitalcommons.lindenwood.edu/faculty-research-papers/756/" target="_blank" rel="noopener noreferrer">
+                "The Case Against Disclosure: Generative AI and the Myth of Transparency in Creative Work"
+              </a>
+            </p>
+          </div>
+
           <div class="about-card">
             <h2>The Argument</h2>
             <p>
@@ -202,10 +220,40 @@ import { getUrl, getAssetUrl } from '../utils/url';
     border: 2px solid var(--burgundy);
   }
 
+  .about-card.highlight-card {
+    background: linear-gradient(135deg, var(--warm-beige), var(--light-beige));
+    border: 3px solid var(--burgundy);
+    box-shadow: 0 4px 12px rgba(74, 31, 31, 0.2);
+    grid-column: 1 / -1;
+  }
+
   .about-card h2 {
     font-size: 2rem;
     color: var(--dark-burgundy);
     margin-bottom: 1rem;
+  }
+
+  .about-card strong {
+    color: var(--burgundy);
+    font-weight: 600;
+  }
+
+  .paper-link {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--burgundy);
+  }
+
+  .paper-link a {
+    color: var(--burgundy);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .paper-link a:hover {
+    color: var(--accent-gold);
+    text-decoration: none;
   }
 
   .about-card p {
