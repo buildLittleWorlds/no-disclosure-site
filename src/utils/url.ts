@@ -9,12 +9,20 @@ export function getUrl(path: string): string {
   // Remove leading slash from path
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   
-  // Ensure proper concatenation
+  // Build the URL
+  let url: string;
   if (base.endsWith('/')) {
-    return base + cleanPath;
+    url = base + cleanPath;
   } else {
-    return base + '/' + cleanPath;
+    url = base + '/' + cleanPath;
   }
+  
+  // Add trailing slash for non-home pages (Astro config: trailingSlash: 'always')
+  if (!url.endsWith('/') && path !== '/' && path !== '') {
+    url = url + '/';
+  }
+  
+  return url;
 }
 
 export function getAssetUrl(path: string): string {
